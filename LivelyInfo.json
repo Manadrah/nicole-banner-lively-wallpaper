@@ -1,0 +1,17 @@
+{
+  "AppVersion": "2.2.1.0",
+  "Title": "Nicole's Banner",
+  "Thumbnail": "thumbnail.png",
+  "Preview": "preview.gif",
+  "Desc": "Nicole's banner from HoYoPlay, turned into a wallpaper.",
+  "Author": "Manadra",
+  "License": "MIT License",
+  "Contact": "",
+  "Type": 1,
+  "FileName": "index.html",
+  "Arguments": null,
+  "IsAbsolutePath": false,
+  "Id": null,
+  "Tags": null,
+  "Version": 0
+}

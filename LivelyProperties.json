@@ -1,0 +1,10 @@
+{
+  "bgMusicVolume": {
+    "title": "Music Volume",
+    "type": "slider",
+    "value": 15,
+    "min": 0,
+    "max": 100,
+    "step": 1
+  }
+}
