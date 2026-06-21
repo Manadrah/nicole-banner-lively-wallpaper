@@ -302,7 +302,6 @@ body {
     left: -50px;
     top: -200px;
     transform-origin: 50px 200px;
-    animation: fieryGlowPulse 3s ease-in-out infinite alternate;
 }
 
 .minute-hand-svg {
@@ -312,7 +311,6 @@ body {
     left: -50px;
     top: -200px;
     transform-origin: 50px 200px;
-    animation: fieryGlowPulse 3s ease-in-out infinite alternate;
 }
 
 /* Base styling for Hand SVG components */
@@ -350,15 +348,38 @@ body {
     }
 }
 
+/* PULSING GLOW GROUPS */
+.hour-hand-glow-group,
+.minute-hand-glow-group {
+    transform-origin: 50px 200px;
+    filter: drop-shadow(0 0 4px #ffeb3b) drop-shadow(0 0 10px #ff9800) drop-shadow(0 0 18px rgba(244, 67, 54, 0.5));
+    animation: fieryGlowPulse 3s ease-in-out infinite alternate;
+}
+
+.hand-part-glow {
+    fill: rgba(255, 249, 196, 0.12);
+    stroke: #fff9c4;
+    stroke-width: 1.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.hand-part-solid-glow {
+    fill: #fff9c4;
+    stroke: #fff9c4;
+    stroke-width: 1;
+}
+
+.hand-part-cutout-glow {
+    fill: transparent;
+    stroke: #fff9c4;
+    stroke-width: 1;
+}
+
 /* PULSING GLOW ANIMATION */
 @keyframes fieryGlowPulse {
-    0% {
-        filter: drop-shadow(0 0 4px #ffeb3b) drop-shadow(0 0 10px #ff9800) drop-shadow(0 0 18px rgba(244, 67, 54, 0.5));
-    }
-
-    100% {
-        filter: drop-shadow(0 0 8px #ffeb3b) drop-shadow(0 0 20px #ff9800) drop-shadow(0 0 35px rgba(244, 67, 54, 0.9));
-    }
+    0% { opacity: 0.6; }
+    100% { opacity: 1; }
 }
 
 /* FIERY TEXT */
