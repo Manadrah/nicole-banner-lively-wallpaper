@@ -1,4 +1,13 @@
 {
+  "videoQuality": {
+    "title": "Video Quality",
+    "type": "dropdown",
+    "value": 0,
+    "items": [
+      "1440p30fps",
+      "1080p30fps"
+    ]
+  },
   "bgMusicVolume": {
     "title": "Music Volume",
     "type": "slider",

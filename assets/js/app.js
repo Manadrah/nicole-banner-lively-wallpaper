@@ -224,10 +224,46 @@ function generateFancyRingPath(cx, cy, R, isOutward = false) {
     return path;
 }
 
+let isLivelyLoaded = false;
+
+function onLivelyLoad() {
+    if (isLivelyLoaded) return;
+    isLivelyLoaded = true;
+
+    const overlay = document.getElementById('loading-overlay');
+    if (overlay) {
+        overlay.style.opacity = '0';
+        setTimeout(() => overlay.remove(), 500);
+    }
+
+    if (audio) audio.play().catch(e => console.log(e));
+
+    const video = document.getElementById("bg-video");
+    if (video) video.play().catch(e => console.log(e));
+}
+
+// Fallback for normal browser preview
+setTimeout(onLivelyLoad, 500);
+
 function livelyPropertyListener(name, val) {
+    onLivelyLoad();
+
     if (name === "bgMusicVolume") {
         if (audio) {
             audio.volume = val / 100;
+        }
+    }
+
+    if (name === "videoQuality") {
+        const video = document.getElementById("bg-video");
+        if (video) {
+            const time = video.currentTime;
+            const newSrc = val === 0 ? "assets/img/bg-video.mp4" : "assets/img/bg-video-1080p.mp4";
+            if (!video.src.endsWith(newSrc)) {
+                video.src = newSrc;
+                video.currentTime = time;
+                video.play().catch(e => console.log(e));
+            }
         }
     }
 }
