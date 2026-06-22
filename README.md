@@ -1,13 +1,14 @@
 # Nicole's Banner - Lively Wallpaper
 
 Nicole's banner from HoYoPlay, turned into a wallpaper.
+Recommended to use WebView2 instead of CefSharp.
 
 ## Preview
 ![Preview](preview.gif)
 
 ## Features
-- **3840x2160@30fps (23845kbps)**: Default, can be changed in the Lively Wallpaper application.
-- **1920x1080@30fps (6589kbps)**
+- **3840x2160@30fps (23443kbps)**: Default, can be changed in the Lively Wallpaper application.
+- **1920x1080@30fps (7813kbps)**
 - **Background Music**: Includes background music with adjustable volume.
 
 ## Installation
