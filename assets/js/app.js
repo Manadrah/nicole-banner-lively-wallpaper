@@ -258,7 +258,10 @@ function livelyPropertyListener(name, val) {
         const video = document.getElementById("bg-video");
         if (video) {
             const time = video.currentTime;
-            const newSrc = val === 0 ? "assets/img/bg-video.webm" : "assets/img/bg-video-1080p.webm";
+            let newSrc = "assets/img/bg-video.webm";
+            if (val === 1) newSrc = "assets/img/bg-video-1080p.webm";
+            if (val === 2) newSrc = "assets/img/bg-video-720p.webm";
+            
             if (!video.src.endsWith(newSrc)) {
                 video.src = newSrc;
                 video.currentTime = time;

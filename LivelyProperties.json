@@ -5,7 +5,8 @@
     "value": 0,
     "items": [
       "2160p30fps",
-      "1080p30fps"
+      "1080p30fps",
+      "720p30fps"
     ]
   },
   "bgMusicVolume": {
